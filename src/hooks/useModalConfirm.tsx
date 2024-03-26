@@ -7,7 +7,7 @@ import useTranslation from "./useTranslation";
 
 type TProps = ModalFuncProps;
 
-export default function useModalDangerConfirm({ onOk, ...props }: TProps) {
+export default function useModalConfirm({ onOk, ...props }: TProps) {
   const { modal: Modal } = useApp();
   const { t } = useTranslation();
   const handleConfirm = (id?: ID, title?: string, actionString = "xóa") => {

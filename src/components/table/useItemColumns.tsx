@@ -1,7 +1,8 @@
-import { Avatar, Flex, Tag, TagProps, Tooltip, Typography } from "antd";
+import { Avatar, Button, Flex, Tag, TagProps, Tooltip, Typography } from "antd";
 import type { ColumnGroupType, ColumnType } from "antd/es/table";
 import dayjs from "dayjs";
 
+import useModalConfirm from "@/hooks/useModalConfirm";
 import { TItem } from "@/types/item-types";
 
 type TuseItemColumnsProps = {};
@@ -9,6 +10,11 @@ type TuseItemColumnsProps = {};
 type TRes = Record<string, ColumnGroupType<TItem> | ColumnType<TItem>>;
 
 export const useItemColumns = (): TRes => {
+  const { handleConfirm: handleConfirmDelete } = useModalConfirm({
+    onOk: (id) => {
+      console.log(id);
+    },
+  });
   //
   return {
     picture: {
@@ -100,6 +106,23 @@ export const useItemColumns = (): TRes => {
                 Xem trên GoogleMaps
               </Typography.Link>
             </Flex>
+          </Flex>
+        );
+      },
+    },
+    actions: {
+      title: "Hành động",
+      key: "actions",
+      render: (_, item, index) => {
+        return (
+          <Flex vertical align="flex-start">
+            <Button
+              danger
+              block
+              onClick={() => handleConfirmDelete(index, item.name.first, "hủy giao xe")}
+            >
+              Xóa
+            </Button>
           </Flex>
         );
       },

@@ -32,7 +32,7 @@ export default function Page() {
 
   const [selectedItems, setSelectedItems] = useState<any[]>([]);
 
-  const { picture, nameCombined1, nationality, gender, dob, location } = useItemColumns();
+  const { picture, nameCombined1, nationality, gender, dob, location, actions } = useItemColumns();
 
   return (
     <StyledWrapper vertical>
@@ -48,6 +48,7 @@ export default function Page() {
           { ...dob, width: 110 },
           { ...nationality, width: 130 },
           { ...location, ellipsis: true, width: 400, hidden: isBelow500 },
+          { ...actions, width: 130, fixed: "right" },
         ]}
         rowSelection={{
           fixed: true,
