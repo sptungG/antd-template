@@ -5,13 +5,6 @@ export const getTotalPage = (total: number, limit: number) => {
   return totalPage === 0 ? 1 : totalPage;
 };
 
-export const bindParamsFilter = (filter: { [x: string]: any }) => {
-  const params = Object.keys(filter)
-    .filter((key) => filter[key] === false || filter[key] === 0 || !!filter[key])
-    .map((key) => `${key}=${filter[key]}`);
-  return params.join("&");
-};
-
 export const formatNumber = (value: number) => {
   return new Intl.NumberFormat().format(Math.floor(value));
 };

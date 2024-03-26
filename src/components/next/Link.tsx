@@ -1,19 +1,19 @@
 import { LinkProps, default as NextLink } from "next/link";
 import { ForwardRefRenderFunction, ReactNode, forwardRef } from "react";
-import useChangeLocale from "src/hooks/useChangeLocale";
+
+import useTranslation from "@/hooks/useTranslation";
 
 export type TLinkProps = LinkProps & {
   className?: string;
   children?: ReactNode;
-  as?: "a";
   style?: React.CSSProperties;
 };
 
 const Link: ForwardRefRenderFunction<HTMLAnchorElement, TLinkProps> = (
-  { className, children, onClick, href = "/", as = "a", style, ...props },
+  { className, children, onClick, href = "/", style, ...props },
   forwardedRef,
 ) => {
-  const { locale } = useChangeLocale();
+  const { locale } = useTranslation();
   return (
     <NextLink {...props} legacyBehavior href={href} passHref locale={locale}>
       <a

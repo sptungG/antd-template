@@ -28,9 +28,9 @@ _dayjs.updateLocale("vi", {
     sameDay: "[Hôm nay lúc] HH:mm", // The same day ( Today at 2:30)
     nextDay: "[Ngày mai lúc] HH:mm", // The next day ( Tomorrow at 2:30)
     lastDay: "[Hôm qua lúc] HH:mm", // The day before ( Yesterday at 2:30)
-    nextWeek: "HH:mm DD-MM-YYYY", // The next week ( Sunday at 2:30)
-    lastWeek: "HH:mm DD-MM-YYYY", // Last week ( Last Monday at 2:30)
-    sameElse: "HH:mm DD-MM-YYYY", // Everything else ( 17/10/2011 )
+    nextWeek: "HH:mm DD/MM/YYYY", // The next week ( Sunday at 2:30)
+    lastWeek: "HH:mm DD/MM/YYYY", // Last week ( Last Monday at 2:30)
+    sameElse: "HH:mm DD/MM/YYYY", // Everything else ( 17/10/2011 )
   },
 });
 

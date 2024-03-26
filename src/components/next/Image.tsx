@@ -35,7 +35,7 @@ const Image = ({
         !!alt
           ? `https://ui-avatars.com/api/?${queryString.stringify({
               name: alt,
-              background: "acc981",
+              // background: "acc981",
               color: "fff",
             })}`
           : fallback
