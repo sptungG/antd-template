@@ -10,8 +10,9 @@ function withAuth(WrappedComponent: any) {
   return function ComponentWithoutAuth() {
     const { pathname } = useRouter();
     // const accessToken = useAppSelector((s) => s.auth.accessToken);
+    const accessToken = null;
 
-    // if (!accessToken) return <Navigate to={`/login?callbackUrl=${pathname}`} />;
+    if (!accessToken) return <Navigate to={`/login?callbackUrl=${pathname}`} />;
 
     return <WrappedComponent />;
   };

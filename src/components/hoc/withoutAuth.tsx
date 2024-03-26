@@ -10,11 +10,12 @@ function withoutAuth(WrappedComponent: any) {
   return function ComponentWithoutAuth() {
     const { query } = useRouter();
     // const accessToken = useAppSelector((s) => s.auth.accessToken);
+    const accessToken = null;
 
-    // if (!!accessToken) {
-    //   const callbackUrl = (query?.callbackUrl as string) || "/";
-    //   return <Navigate to={callbackUrl} />;
-    // }
+    if (!!accessToken) {
+      const callbackUrl = (query?.callbackUrl as string) || "/";
+      return <Navigate to={callbackUrl} />;
+    }
 
     return <WrappedComponent />;
   };
