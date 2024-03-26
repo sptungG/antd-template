@@ -16,7 +16,7 @@
     "antd": "^5.15.4",
     "dayjs": "^1.11.10",
     "i18next": "^23.10.1",
-    "next": "13.4.7",
+    "next": "13.5.0",
     "next-nprogress-bar": "^2.3.9",
     "next-secure-headers": "^2.2.0",
     "next-seo": "^6.5.0",
