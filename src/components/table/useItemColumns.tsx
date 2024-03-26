@@ -26,6 +26,7 @@ export const useItemColumns = (): TRes => {
         </Avatar>
       ),
     },
+    //
     nameCombined1: {
       title: "Họ & tên",
       key: "name",
@@ -44,6 +45,7 @@ export const useItemColumns = (): TRes => {
         </Flex>
       ),
     },
+    //
     nationality: {
       title: "Quốc gia",
       key: "nat",
@@ -53,6 +55,7 @@ export const useItemColumns = (): TRes => {
         </Typography.Text>
       ),
     },
+    //
     gender: {
       title: "",
       key: "gender",
@@ -64,6 +67,7 @@ export const useItemColumns = (): TRes => {
         return <Tag bordered {...(configTag?.[item.gender] || { children: "---" })} />;
       },
     },
+    //
     dob: {
       title: "Sinh nhật",
       key: "dob",
@@ -82,6 +86,7 @@ export const useItemColumns = (): TRes => {
         </Tooltip>
       ),
     },
+    //
     location: {
       title: "Địa chỉ",
       key: "location",
@@ -110,6 +115,7 @@ export const useItemColumns = (): TRes => {
         );
       },
     },
+    //
     actions: {
       title: "Hành động",
       key: "actions",
@@ -127,6 +133,7 @@ export const useItemColumns = (): TRes => {
         );
       },
     },
+    //
   };
   //
 };
