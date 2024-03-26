@@ -15,7 +15,7 @@ export const StyledTable = styled(Table<any>)`
     backdrop-filter: blur(10px);
   }
 
-  .ant-table-pagination {
+  &.sticky-pagination .ant-table-pagination {
     position: sticky;
     bottom: 0;
     background: #fff;
