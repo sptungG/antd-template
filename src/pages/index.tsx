@@ -4,6 +4,7 @@ import { useState } from "react";
 import { useMediaQuery } from "react-responsive";
 import useSWR from "swr";
 
+import SEO from "@/components/next/SEO";
 import { StyledTable } from "@/components/table/StyledTable";
 import { useItemColumns } from "@/components/table/useItemColumns";
 
@@ -36,6 +37,7 @@ export default function Page() {
 
   return (
     <StyledWrapper vertical>
+      <SEO />
       <StyledTable
         loading={isLoading}
         showSorterTooltip={false}
