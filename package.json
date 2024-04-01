@@ -9,11 +9,13 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@ckeditor/ckeditor5-react": "^6.2.0",
     "@emotion/react": "^11.11.4",
     "@emotion/styled": "^11.11.0",
     "@svgr/webpack": "^8.1.0",
     "@vercel/og": "^0.6.2",
     "antd": "^5.15.4",
+    "ckeditor5-custom-build": "file:./ckeditor-41.2.1",
     "dayjs": "^1.11.10",
     "i18next": "^23.10.1",
     "next": "13.4.7",
